@@ -34,7 +34,6 @@ function PlaylistPage(props) {
 			<div className={styles.Bg}></div>
 
 			<Topnav />
-			
 			{PLAYLIST.map((item) => {
                 if(item.link === path){
                     return (

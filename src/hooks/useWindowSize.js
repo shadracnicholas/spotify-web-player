@@ -12,6 +12,7 @@ function useWindowSize() {
 
   const [windowSize, setWindowSize] = useState(getSize)
 
+  
   useEffect(() => {
     if (!isClient) {
       return false
@@ -23,6 +24,8 @@ function useWindowSize() {
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return windowSize
