@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Route } from "react-router-dom";
 import TitleM from '../component/text/title-m';
 import Topnav from '../component/topnav/topnav';
 import PlaylistCardM from '../component/cards/playlist-card-m'
@@ -25,7 +25,7 @@ function PlaylistTab(){
         <div>
             <TitleM>Çalma Listeleri</TitleM>
             <div className={styles.Grid}>
-                {PLAYLIST.filter(item => item.type == 'playlist').map((item) => {
+                {PLAYLIST.filter(item => item.type === 'playlist').map((item) => {
                     return (
                         <PlaylistCardM 
                             key={item.title}
@@ -43,7 +43,7 @@ function PodcastTab(){
         <div>
             <TitleM>Podcast'ler</TitleM>
             <div className={styles.Grid}>
-                {PLAYLIST.filter(item => item.type == 'podcast').map((item) => {
+                {PLAYLIST.filter(item => item.type === 'podcast').map((item) => {
                     return (
                         <PlaylistCardM 
                             key={item.title}
@@ -69,7 +69,7 @@ function AlbumTab(){
         <div>
             <TitleM>Albümler</TitleM>
             <div className={styles.Grid}>
-                {PLAYLIST.filter(item => item.type == 'albüm').map((item) => {
+                {PLAYLIST.filter(item => item.type === 'albüm').map((item) => {
                     return (
                         <PlaylistCardM 
                             key={item.title}

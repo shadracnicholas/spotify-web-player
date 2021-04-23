@@ -11,6 +11,7 @@ import styles from "./playlist-card-m.module.css";
 function PlaylistCardM(props) {
 	const[isthisplay, setIsthisPlay] = useState(false)
 
+	// eslint-disable-next-line
 	useEffect(() => {
 		setIsthisPlay(parseInt(props.data.index) === props.trackData.trackKey[0])
 	})

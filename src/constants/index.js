@@ -1,6 +1,7 @@
 import * as Icon from '../component/icons'
 import React from 'react'
 
+// eslint-disable-next-line
 export default {
   MOBILE_SIZE: 640,
 }

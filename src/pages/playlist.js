@@ -22,6 +22,7 @@ function PlaylistPage(props) {
 		document.documentElement.style.setProperty('--hover-home-bg', color);
 	}
 
+	// eslint-disable-next-line
 	useEffect(() => {
 		setIsthisPlay(playlistIndex === props.trackData.trackKey[0])
 	})
@@ -33,9 +34,9 @@ function PlaylistPage(props) {
 			<div className={styles.Bg}></div>
 
 			<Topnav />
-
+			
 			{PLAYLIST.map((item) => {
-                if(item.link == path){
+                if(item.link === path){
                     return (
                         <div key={item.title} onLoad={() => {
 							changeBg(item.playlistBg);

@@ -13,6 +13,7 @@ function RangeSlider({value, minvalue, maxvalue, handleChange}){
         inputRefWidth.current = parseInt(inputWidth.replace('px',''))
     })
 
+    // eslint-disable-next-line
     useEffect(() => {
         if(maxvalue > 1){
             setDecimalValue((value * 1) / maxvalue);

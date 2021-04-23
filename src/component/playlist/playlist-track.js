@@ -15,6 +15,7 @@ function PlaylistTrack(props) {
         setthisSong(props.data.song.link == localStorage.getItem('playedSong'));
     }, 50);*/
     
+    // eslint-disable-next-line
     useEffect(() => {
         if(props.data.song.link === props.trackData.track && props.isPlaying === true){
             setthisSong(true)
@@ -43,11 +44,11 @@ function PlaylistTrack(props) {
             </button>
 
             {thisSong 
-                    ? <img className={styles.gif} src={Playgif} /> 
+                    ? <img className={styles.gif} src={Playgif} alt=""/> 
                     : <p className={styles.SongIndex}>{props.data.song.index}</p>
             }
 
-			{props.data.listType === "albüm" ? "" : <img src={props.data.song.songimg} />}
+			{props.data.listType === "albüm" ? "" : <img src={props.data.song.songimg} alt=""/>}
 
 			<span>
 				<TextBoldL>{props.data.song.songName}</TextBoldL>

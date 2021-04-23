@@ -1,4 +1,4 @@
-import React, { useState, useEffect  } from 'react';
+import React from 'react';
 import { BrowserRouter as Router,
   Switch,
   Route
@@ -13,7 +13,6 @@ import Library from './pages/library';
 import PlaylistPage from './pages/playlist';
 
 import CONST from './constants/index';
-import { PLAYLIST } from './data/index';
 import styles from './style/App.module.css';
 
 function App() {

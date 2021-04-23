@@ -6,7 +6,7 @@ function SearchPageCard({cardData}){
     return (
         <div key={cardData.title} className={styles.SearchCardBox} style={{backgroundColor: `${cardData.bgcolor}`}}>
             <div className={styles.SearchCard}>
-                <img src={cardData.imgurl} />
+                <img src={cardData.imgurl} alt=""/>
                 <TitleM>{cardData.title}</TitleM>
             </div>
         </div>

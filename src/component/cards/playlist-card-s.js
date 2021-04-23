@@ -14,6 +14,7 @@ function PlaylistCardS(props){
         document.documentElement.style.setProperty('--hover-home-bg', props.data.hoverColor);
     }
 
+    // eslint-disable-next-line
     useEffect(() => {
 		setIsthisPlay(parseInt(props.data.index) === props.trackData.trackKey[0])
 	})
